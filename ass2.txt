@@ -1,0 +1,36 @@
+1)
+import numpy as np
+import pylab as pl
+x=np.array([1,2,3,8,5,6,7,8],dtype=np.float32)
+y=np.array([1,2,3,4,5,6,7,8],dtype=np.float32)
+print(x)
+print(y)
+
+
+2)
+mean1=np.mean(x)
+mean2=np.mean(y)
+print(mean1)
+print(mean2)
+
+
+3)
+var=0
+for i in range(0,len(x)) :
+        var+=np.sum(np.square(i-mean1))
+variace=var/x.size
+print(variace) 
+
+
+
+4)  
+    covar=0.0
+    for i in range(0,len(x)):
+        covar+=((x[i]-mean1)*(y[i]-mean2))
+    covariance=covar/(len(x)-1)
+    print(covariance)
+
+
+5)
+m=covariance/variace
+print(m)
